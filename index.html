@@ -21,7 +21,7 @@
               <li>
                 <a href="">Каталог</a>
                 <ul class="site-list">
-                  <li><a>Новинки</a></li>
+                  <li><a class="new">Новинки</a></li>
                   <li><a href="catalog.html">Сливочное</a></li>
                   <li><a href="">Щербеты</a></li>
                   <li><a href="">Фруктовый лёд</a></li>
@@ -53,7 +53,7 @@
               </li>
             </ul>
             <h2 class="visually-hidden">Когда нам позвонить?</h2>
-            <p><span class="visually-hidden">Для заказов по телефону: </span>С 10 до 20, ежедневно <a class="footer-phone" href="tel:+78124502525">8 812 450-25-25</a></p>
+            <p><span class="visually-hidden">Для заказов по телефону: </span>С 10 до 20, ежедневно <a class="header-phone" href="tel:+78124502525">8 812 450-25-25</a></p>
           </nav>
         </header>
         <main class="page-main">
@@ -62,15 +62,15 @@
             <ul class="sliders-list">
               <li class="sliders-item">
                 <h3>Крем-брюле и пломбир с малиновым джемом</h3>
-                <a href="">Давайте оба!</a>
+                <span><a href="">Давайте оба!</a></span>
               </li>
               <li class="sliders-item">
                 <h3>Шоколадный пломбир и лимонный сорбет</h3>
-                <a href="">Давайте оба!</a>
+                <span><a href="">Давайте оба!</a></span>
               </li>
               <li class="sliders-item">
                 <h3>Пломбир с помадкой и клубничный щербет</h3>
-                <a href="">Давайте оба!</a>
+                <span><a href="">Давайте оба!</a></span>
               </li>
             </ul>
             <!-- <div>
@@ -81,12 +81,16 @@
           </section>
           <section class="promotions">
             <h2 class="visually-hidden">Акция дня</h2>
-            <h3>Малинка даром!</h3>
-            <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-            <a href="">Хочу варенье!</a>
-            <h3>Шоколадки даром!</h3>
-            <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки абсолютно бесплатно.</p>
-            <a href="">Хочу шокладки!</a>
+            <div class="promotions-block promotions-block_raspberry">
+              <h3>Малинка даром!</h3>
+              <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+              <span><a href="">Хочу варенье!</a></span>
+            </div>
+            <div class="promotions-block promotions-block_chocolate">
+              <h3>Шоколадки даром!</h3>
+              <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки абсолютно бесплатно.</p>
+              <span><a href="">Хочу шокладки!</a></span>
+            </div>
           </section>
           <section class="products">
             <h2 class="visually-hidden">Продукция</h2>
@@ -95,25 +99,25 @@
                 <h3><a href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
                 <p>310 <span>₽/кг</span></p>
                 <a href=""><img src="https://via.placeholder.com/267x267" alt=""></a>
-                <a href="">Быстрый просмотр</a>
+                <span><a href="">Быстрый просмотр</a></span>
               </li>
               <li class="products-item">
                 <h3><a href="">Сливочно-кофейное с кусочками шоколада</a></h3>
                 <p>380 <span>₽/кг</span></p>
                 <a href=""><img src="https://via.placeholder.com/267x267" alt=""></a>
-                <a href="">Быстрый просмотр</a>
+                <span><a href="">Быстрый просмотр</a></span>
               </li>
               <li class="products-item">
                 <h3><a href="">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
                 <p>355 <span>₽/кг</span></p>
                 <a href=""><img src="https://via.placeholder.com/267x267" alt=""></a>
-                <a href="">Быстрый просмотр</a>
+                <span><a href="">Быстрый просмотр</a></span>
               </li>
               <li class="products-item">
                 <h3><a href="">Сливочное крем-брюле с карамельной подливкой</a></h3>
                 <p>415 <span>₽/кг</span></p>
                 <a href=""><img src="https://via.placeholder.com/267x267" alt=""></a>
-                <a href="">Быстрый просмотр</a>
+                <span><a href="">Быстрый просмотр</a></span>
               </li>
             </ul>
           </section>
@@ -144,7 +148,8 @@
           <section class="footer-contacts">
             <h2 class="visually-hidden">Контакты</h2>
             <p>Адрес главного офиса и офлайн-магазина: <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span></p>
-            <p>Для заказов по телефону: <a class="footer-phone" href="tel:+78124502525">8 812 450-25-25</a> <span>(с 10 до 20 ежедневно)</span></p>
+            <p>Для заказов по телефону: <a class="footer-phone" href="tel:+78124502525">8 812 450-25-25</a> <span class="footer-phone-time">(с 10 до 20 ежедневно)</span></p>
+            <span><a href="">Форма обратной связи</a></span>
           </section>
           <section class="footer-social">
             <h2 class="visually-hidden">Соцсети: ссылки</h2>

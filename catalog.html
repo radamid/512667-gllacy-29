@@ -61,9 +61,72 @@
             <li><a href="">Каталог</a></li>
             <li><a class="active">Сливочное</a></li>
           </ul>
-          <!-- <section>
-            Форма фильтра и сортировки
-          </section> -->
+          <section class="filters">
+            <h2 class="visually-hidden">Форма для фильтра товара</h2>
+            <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+              <fieldset>
+                <legend>
+                  <label class="sort-label" for="sort">Сортировка:</label>
+                </legend>
+                <select class="sort" name="sort" id="sort">
+                  <option value="1">по пулярности</option>
+                  <option value="2">по возрастанию</option>
+                  <option value="3">по убыванию</option>
+                </select>
+              </fieldset>
+              <fieldset>
+                <legend>
+                  Цена:
+                  <span class="min-price">100</span> руб. — <span class="max-price">500</span> руб.
+                </legend>
+                <div class="range-filter">
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar" style="
+                        width: 43%;
+                        margin-left: 20%
+                      "></div>
+                    </div>
+                    <div class="toggle toggle_min" tabindex="0" style="
+                      left: 17%
+                    "></div>
+                    <div class="toggle toggle_max" tabindex="0" style="
+                      left: 60%
+                    "></div>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Жирность:</legend>
+                <div class="fat">
+                  <input class="visually-hidden" type="radio" name="fat" value="fat_level-1" id="fat_level-1">
+                  <label for="fat_level-1">0%</label>
+                  <input class="visually-hidden" type="radio" name="fat" value="fat_level-2" id="fat_level-2" checked>
+                  <label for="fat_level-2">до 10%</label>
+                  <input class="visually-hidden" type="radio" name="fat" value="fat_level-3" id="fat_level-3">
+                  <label for="fat_level-3">до 30%</label>
+                  <input class="visually-hidden" type="radio" name="fat" value="fat_level-4" id="fat_level-4" disabled>
+                  <label for="fat_level-4">выше 30%</label>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Наполнители:</legend>
+                <div class="fillers">
+                  <input class="visually-hidden" type="checkbox" name="chocolate" id="chocolate" checked>
+                  <label for="chocolate">шоколадные</label>
+                  <input class="visually-hidden" type="checkbox" name="powdered-sugar" id="powdered-sugar" disabled checked>
+                  <label for="powdered-sugar">сахарные присыпки</label>
+                  <input class="visually-hidden" type="checkbox" name="fruits" id="fruits">
+                  <label for="fruits">фрукты</label>
+                  <input class="visually-hidden" type="checkbox" name="syrups" id="syrups" disabled>
+                  <label for="syrups">сиропы</label>
+                  <input class="visually-hidden" type="checkbox" name="jams" id="jams">
+                  <label for="jams">джемы</label>
+              </div>
+              </fieldset>
+              <input type="submit" value="Применить">
+            </form>
+          </section>
           <section class="products">
             <h2 class="visually-hidden">Отборная продукция</h2>
             <ul class="products-list">

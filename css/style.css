@@ -1559,6 +1559,65 @@ img {
   color: var(--gray-65);
 }
 
+.subscribe-form {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 35px 22px 0 22px;
+  padding: 0;
+}
+
+.subscribe-form fieldset {
+  width: 371px;
+  height: 47px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+.subscribe-form input[type="email"] {
+  width: 99%;
+  padding: 11px 16px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--black-light);
+  background: var(--basic-white);
+  border: 1px solid var(--gray-17);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.subscribe-form input[type="submit"] {
+  padding: 9px 20px 13px 20px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  border: 0;
+  border-radius: 24px;
+  color: var(--white-dark);
+  background: linear-gradient(0deg, var(--red-light) 0%, var(--red-lighten) 100%);
+  box-shadow: 0px 1px 2px var(--red-dark);
+  cursor: pointer;
+}
+
+.subscribe-form input[type="submit"]:hover,
+.subscribe-form input[type="submit"]:focus {
+  background: linear-gradient(0deg, rgba(var(--rgb-white), 0.2), rgba(var(--rgb-white), 0.2)), linear-gradient(0deg, var(--red-light) 0%, var(--red-lighten) 100%);
+  box-shadow: 0 2px 2px var(--red-dark);
+}
+
+.subscribe-form input[type="submit"]:active {
+  background: linear-gradient(0deg, rgba(var(--rgb-black), 0.07), rgba(var(--rgb-black), 0.07)), linear-gradient(0deg, var(--red-lighten) 0%, var(--red-light) 100%);
+  box-shadow: inset 0 2px 2px var(--red-darken);
+}
+
 /* Map */
 
 .map {

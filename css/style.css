@@ -38,11 +38,14 @@
   --bg-1: #849D8F;
   --bg-2: #8996A6;
   --bg-3: #9D8B84;
+  --black-light: #999999;
   --red-darken: #942718;
   --red-dark: #AC1000;
   --red-blade: #D07058;
   --basic-red: #E84D37;
   --red-light: #E74A35;
+  --gray-20: #CACAC7;
+  --gray-17: #D3D3D2;
   --gray-07: #EDEDED;
   --red-lighten: #F26843;
   --red-rose: #F6B5A5;
@@ -117,21 +120,24 @@ img {
 #slide-1:checked ~ .site-wrapper {
   background:
     url("../img/creme-brulee.png") no-repeat 75px 0,
-    url("../img/raspberry-ice-cream.png") no-repeat 75px 0;
+    url("../img/raspberry-ice-cream.png") no-repeat 75px 0,
+    url("../img/bg-1.png") no-repeat center 0;
   background-color: var(--bg-1);
 }
 
 #slide-2:checked ~ .site-wrapper {
   background:
     url("../img/chocolate-sundae.png") no-repeat 350px 75px,
-    url("../img/lemon-sorbet.png") no-repeat 75px 0;
+    url("../img/lemon-sorbet.png") no-repeat 75px 0,
+    url("../img/bg-2.png") no-repeat center 0;
   background-color: var(--bg-2);
 }
 
 #slide-3:checked ~ .site-wrapper {
   background:
     url("../img/sundae-fondant.png") no-repeat 75px 0,
-    url("../img/strawberry-sherbet.png") no-repeat 75px 0;
+    url("../img/strawberry-sherbet.png") no-repeat 75px 0,
+    url("../img/bg-3.png") no-repeat center 0;
   background-color: var(--bg-3);
 }
 
@@ -347,6 +353,7 @@ img {
 }
 
 .user-item {
+  position: relative;
   font-family: "Roboto", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -426,6 +433,249 @@ img {
   background-repeat: no-repeat;
   background-position: 16px center;
   background-image: url("../img/basket-red_hover.svg");
+}
+
+.user-item > ul {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  display: none;
+  margin: 0;
+  padding: 20px 15px;
+  list-style: none;
+  border: 0;
+  border-radius: 5px;
+  z-index: 1;
+  background: var(--white-bg);
+  box-shadow: 0px 20px 20px rgba(var(--rgb-black), 0.4);
+}
+
+.user-item:hover > ul,
+.user-item:focus > ul {
+  display: block;
+}
+
+.search-form fieldset,
+.login-form fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.search-form {
+  width: 311px;
+}
+
+.login-form {
+  width: 244px;
+}
+
+.search-form input[type="search"],
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 11px 16px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--black-light);
+  background: var(--basic-white);
+  border: 1px solid var(--gray-17);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  margin-bottom: 17px;
+}
+
+.search-form input[type="submit"] {
+  position: absolute;
+  top: -36px;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  background-color: var(--white-darken);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../img/loupe_hover.svg");
+  cursor: pointer;
+}
+
+.login-form input[type="submit"] {
+  padding: 12px 25px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  border: 0;
+  border-radius: 24px;
+  color: var(--white-dark);
+  background: linear-gradient(0deg, var(--red-light) 0%, var(--red-lighten) 100%);
+  box-shadow: 0px 1px 2px var(--red-dark);
+  cursor: pointer;
+}
+
+.login-form input[type="submit"]:hover,
+.login-form input[type="submit"]:focus {
+  background: linear-gradient(0deg, rgba(var(--rgb-white), 0.2), rgba(var(--rgb-white), 0.2)), linear-gradient(0deg, var(--red-light) 0%, var(--red-lighten) 100%);
+  box-shadow: 0 2px 2px var(--red-dark);
+}
+
+.login-form input[type="submit"]:active {
+  background: linear-gradient(0deg, rgba(var(--rgb-black), 0.07), rgba(var(--rgb-black), 0.07)), linear-gradient(0deg, var(--red-lighten) 0%, var(--red-light) 100%);
+  box-shadow: inset 0 2px 2px var(--red-darken);
+}
+
+.user-item_login-forget,
+.user-item_login-new {
+  position: absolute;
+  left: 138px;
+}
+
+.user-item_login-forget {
+  bottom: 44px;
+}
+
+.user-item_login-new {
+  bottom: 24px;
+}
+
+.user-item_login-forget,
+.user-item_login-new {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.user-item_login li > a {
+  text-decoration-line: underline;
+  color: var(--basic-gray);
+}
+
+.user-item_login li > a:hover,
+.user-item_login li > a:focus,
+.user-item_login li > a:active {
+  text-decoration: none;
+  color: var(--basic-red);
+}
+
+.user-item:last-of-type > ul {
+  width: 540px;
+  margin: 0;
+  padding: 0 16px;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.user-item:last-of-type > ul > li {
+  margin: 0;
+  padding: 12px 0;
+}
+
+.user-list_order {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.user-list_order > li {
+  display: inline-block;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  vertical-align: top;
+}
+
+.product-delete {
+  width: 11px;
+  height: 11px;
+  margin-top: 11px;
+  padding: 0 7px;
+  background: url("../img/cross-small.svg") no-repeat center center;
+  cursor: pointer;
+}
+
+.product-icon {
+  width: 33px;
+  height: 33px;
+}
+
+.product-name {
+  width: 244px;
+  margin-top: 11px;
+  margin-left: 7px;
+  color: var(--basic-gray);
+}
+
+.product-weight,
+.product-x {
+  margin-top: 11px;
+  color: var(--basic-gray);
+}
+
+.product-price {
+  margin-top: 11px;
+  color: var(--black-light);
+}
+
+.product-total {
+  width: 73px;
+  margin-top: 11px;
+  text-align: right;
+  color: var(--basic-gray);
+}
+
+.user-item_order-total {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--basic-gray);
+  border-top: 1px solid var(--gray-20);
+  text-align: right;
+}
+
+.user-item_order-button {
+  height: 48px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: right;
+}
+
+.user-item_order-button span {
+  padding: 10px 14px 14px 16px;
+  border: 0;
+  border-radius: 24px;
+  color: var(--white-dark);
+  background: linear-gradient(0deg, var(--red-light) 0%, var(--red-lighten) 100%);
+  box-shadow: 0px 1px 2px var(--red-dark);
+  cursor: pointer;
+}
+
+.user-item_order-button span:hover,
+.user-item_order-button span:focus {
+  background: linear-gradient(0deg, rgba(var(--rgb-white), 0.2), rgba(var(--rgb-white), 0.2)), linear-gradient(0deg, var(--red-light) 0%, var(--red-lighten) 100%);
+  box-shadow: 0 2px 2px var(--red-dark);
+}
+
+.user-item_order-button span:active {
+  background: linear-gradient(0deg, rgba(var(--rgb-black), 0.07), rgba(var(--rgb-black), 0.07)), linear-gradient(0deg, var(--red-lighten) 0%, var(--red-light) 100%);
+  box-shadow: inset 0 2px 2px var(--red-darken);
 }
 
 /* Main */

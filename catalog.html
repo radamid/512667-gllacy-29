@@ -31,21 +31,63 @@
           <ul class="user-list">
             <li class="user-item user-item_search">
               <a href=""><span class="visually-hidden">Поиск</span></a>
-              <!-- <ul>
-                <li>Форма для поиска</li>
-              </ul> -->
+              <ul>
+                <li>
+                  <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+                    <fieldset>
+                      <legend class="visually-hidden">Форма для поиска</legend>
+                      <input type="search" name="search" value="" placeholder="Что ищем?" required>
+                    </fieldset>
+                    <input type="submit" aria-label="Найти" value="">
+                  </form>
+                </li>
+              </ul>
             </li>
             <li class="user-item user-item_login">
               <a href=""><span>Вход</span></a>
-              <!-- <ul>
-                <li>Форма для входа</li>
-              </ul> -->
+              <ul>
+                <li>
+                  <form class="login-form" action="https://echo.htmlacademy.ru" method="get">
+                    <fieldset>
+                      <legend class="visually-hidden">Форма для входа</legend>
+                      <input type="email" name="email" value="" placeholder="email@example.com" aria-label="Электронная почта" required>
+                      <input type="password" name="password" value="" placeholder="********" aria-label="Пароль" required>
+                    </fieldset>
+                    <input type="submit" value="Войти">
+                  </form>
+                </li>
+                <li class="user-item_login-forget"><a href="">Забыли пароль?</a></li>
+                <li class="user-item_login-new"><a href="">Новая регистрация</a></li>
+              </ul>
             </li>
             <li class="user-item user-item_order-full">
               <a href=""><span>2 товара</span></a>
-              <!-- <ul>
-                <li>Форма для заказов</li>
-              </ul> -->
+              <ul>
+                <li>
+                  <ul class="user-list_order">
+                    <li class="product-delete"><span class="visually-hidden">Удалить</span></li>
+                    <li class="product-icon"><img src="img/icon-1.png" width="33" height="33" alt="Пломбир"></li>
+                    <li class="product-name">Пломбир с&nbsp;апельсиновым джемом</li>
+                    <li class="product-weight">1,5 кг</li>
+                    <li class="product-x">х</li>
+                    <li class="product-price">200 руб.</li>
+                    <li class="product-total">300 руб.</li>
+                  </ul>
+                </li>
+                <li>
+                  <ul class="user-list_order">
+                    <li class="product-delete"><span class="visually-hidden">Удалить</span></li>
+                    <li class="product-icon"><img src="img/icon-3.png" width="33" height="33" alt="Клубничный пломбир"></li>
+                    <li class="product-name">Клубничный пломбир с&nbsp;присыпкой из&nbsp;белого шоколада</li>
+                    <li class="product-weight">1,5 кг</li>
+                    <li class="product-x">х</li>
+                    <li class="product-price">300 руб.</li>
+                    <li class="product-total">450 руб.</li>
+                  </ul>
+                </li>
+                <li class="user-item_order-total">Итого: <span>750 руб.</span></li>
+                <li class="user-item_order-button"><span>Оформить заказ</span></li>
+              </ul>
             </li>
           </ul>
         </nav>
@@ -69,9 +111,10 @@
                   <label class="sort-label" for="sort">Сортировка:</label>
                 </legend>
                 <select class="sort" name="sort" id="sort">
-                  <option value="1">по пулярности</option>
-                  <option value="2">по возрастанию</option>
-                  <option value="3">по убыванию</option>
+                  <option value="popular">по пулярности</option>
+                  <option value="cheap">сначала недорогие</option>
+                  <option value="expensive">сначала дорогие</option>
+                  <option value="fat">по жирности</option>
                 </select>
               </fieldset>
               <fieldset>

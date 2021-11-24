@@ -212,6 +212,20 @@
         </footer>
       </div>
     </div>
-    <link href="preview/style.css" rel="stylesheet">
+    <div class="modal modal-show modal-feedback">
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset>
+          <legend>Мы обязательно вам ответим!</legend>
+          <input type="text" name="name" value="" placeholder="Имя Фамилия" required>
+          <input type="email" name="email" value="" placeholder="email@example.com" required>
+          <textarea name="message" placeholder="В свободной форме" required></textarea>
+        </fieldset>
+        <div>
+          <input type="submit" aria-label="Отправить сообщение" value="Отправить">
+        </div>
+      </form>
+      <span class="feedback-button-close" aria-label="Закрыть форму"></span>
+    </div>
+    <div class="modal modal-show modal-overlay"></div>
   </body>
 </html>
